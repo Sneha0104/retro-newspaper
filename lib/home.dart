@@ -38,15 +38,22 @@ class _Home extends State<Home> {
             title: Text('Home'),
           ),
           
-          body: TabBarView(
-            children: [
-              
-              NewsList(),
-              NewsList(),
-              NewsList()
+          body: Container(
+            decoration: BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage("assets/images/retro.jpeg"),
+            fit: BoxFit.cover,
+          ),),
+            child: TabBarView(
+              children: [
+                
+                NewsList(),
+                NewsList(),
+                NewsList()
 
-           
-                        ],
+             
+                          ],
+            ),
           ),
           
         ),

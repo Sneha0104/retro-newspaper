@@ -11,8 +11,7 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: "Networking Test",
-     
+      title: "Retro Reddit",
       home: Home()
     );
   }
