@@ -1,6 +1,7 @@
 import 'newsList.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:intl/intl.dart';
 
 class Home extends StatefulWidget {
   @override
@@ -10,6 +11,9 @@ class Home extends StatefulWidget {
 class _Home extends State<Home> {
   @override
   Widget build(BuildContext context) {
+    var now = new DateTime.now();
+    String formattedDate =
+        DateFormat('EEEE, MMMM d, y').format(now).toUpperCase();
     return MaterialApp(
       home: Scaffold(
         drawer: Drawer(
@@ -184,7 +188,7 @@ class _Home extends State<Home> {
               ),
             ),
             Text(
-              '\t\t\t\tNEW YORK, SUNDAY, JUNE 28, 2020\t\t\t\t',
+              '\t\t\t\tNEW YORK, $formattedDate',
               style: GoogleFonts.ebGaramond(
                 textStyle: Theme.of(context).textTheme.display1,
                 fontSize: 20,
