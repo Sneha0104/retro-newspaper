@@ -5,15 +5,10 @@ import 'home.dart';
 
 void main() => runApp(App());
 
-
 class App extends StatelessWidget {
-
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: "Retro Reddit",
-      home: Home()
-    );
+    //imageCache.clear();
+    return MaterialApp(title: "Retro Reddit", home: Home());
   }
-
 }
